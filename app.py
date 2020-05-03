@@ -37,6 +37,7 @@ data.sort_values(by='Your Rating', ascending=False ,inplace = True)
 #Get top 100
 data100 = data.head(100)
 
+
 print(data100.head())
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
@@ -63,7 +64,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
     }),
 
     dcc.Graph(
-        id='life-exp-vs-gdp',
+        id='Rating vs Runtime',
         figure={
             'data': [
                 dict(
@@ -85,6 +86,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
                 margin={'l': 40, 'b': 40, 't': 10, 'r': 10},
                 legend={'x': 0, 'y': 1},
                 hovermode='closest'
+                
             )
         }
     )
